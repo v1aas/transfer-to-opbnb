@@ -57,7 +57,7 @@ def check_balance_on_opbnb():
         balance = web3_opbsc.from_wei(web3_opbsc.eth.get_balance(client.address), 'ether')
         print(f"Баланс адреса {client.address}: {balance} opBNB. {num}")
                 
-def transfer_to_opbnb(client: Client):
+def transfer_to_opbnb():
     for key in get_wallets():
         client = Client(web3_bsc, key)
         contract = client.web3.eth.contract(address="0x51187757342914E7d94FFFD95cCCa4f440FE0E06", abi=ABI)
